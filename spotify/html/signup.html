@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="author" content="Matthew Lewicki">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/spotify/css/login.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title>Spotify Login</title>
+  </head>
+  <body>
+    <section>
+       <h3>Sign up for free to start listening.</h3>
+      <form method="post" name="signup" action="/signup" id="signup">
+        <fieldset>
+            <input id="fullname" name="fullname" type="text" placeholder="fullname"  minlength="4" required>
+        </fieldset>
+        <fieldset>
+          <input id="username" name="username" type="text" placeholder="Username"  minlength="4" required>
+        </fieldset>
+        <fieldset>
+          <input id="password" name="password" type="password" placeholder="Password" minlength="8" required value="12345678">
+        </fieldset>
+        <fieldset>
+          <input type="submit" name='submit' value="Sign up" />
+        </fieldset>
+      </form>
+        <p class="error-message">{{ sms }} </p>
+    </section>
+  </body>
+</html>
+
+
