@@ -24,7 +24,7 @@ def generate_jwt_token(username):
     token = {
         "username": username,
         "iat": seconds_now -1,
-        "exp": seconds_now + 480 # 30000
+        "exp": seconds_now + 7200 #30000
     }
     return jwt.encode( token,jwt_secret, algorithm="HS256" )
 def ok_jwt_token(token):
