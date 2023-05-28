@@ -6,16 +6,17 @@ COPY requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --upgrade firebase-admin
+RUN pip install Flask[async]
+RUN pip install kubernetes
 # Copy the Python script
 # COPY spotify/main.py .
 # COPY spotify/serviceAccountKey.json .
 # COPY spotify/login.html .
 # COPY spotify/css/login.css .
-COPY spotify /app/spotify
-
-# Set the working directory
 WORKDIR /app
+COPY spotify /app/spotify
+# Set the working directory
+
 # Start the Python application
 # Set environment variable
-ENV JWT_SECRET=test
-CMD ["python", "spotify/main.py"]
+CMD ["python", "spotify/app.py"]

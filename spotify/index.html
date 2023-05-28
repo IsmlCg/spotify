@@ -11,20 +11,30 @@
   <body>
     <section>
        <h1>Welcome to Spotify</h1>
-      <form method="post" name="loggin" action="/login" id="loggin">
+      <form method="post" name="loggin" action="/index" id="loggin">
         <fieldset>
-          <input id="username" name="username" type="text" placeholder="Username" required>
+          <input id="username" name="username" type="text" placeholder="Username" value="izzy"  oninput="setUsername()" required>
         </fieldset>
         <fieldset>
-          <input id="password" name="password" type="password" placeholder="Password" required>
+          <input id="password" name="password" type="password" placeholder="Password" value="12345678" required>
         </fieldset>
-        <fieldset>
+        <fieldset class="sign-in">
           <input type="submit" name='submit' value="Sign In" />
         </fieldset>
+        <div class="topbar">
+          <div class="navbar">
+            <ul>
+              <li>
+                <a href="/signup">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </form>
-        <p class="error-message">{{sms}}</p>
+      
+      <p class="error-message">{{sms}}</p>
     </section>
   </body>
 </html>
 
-
+<script src="spotify/js/login.js"></script>

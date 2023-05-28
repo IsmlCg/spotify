@@ -51,7 +51,11 @@ body{
       margin:0 auto;
     padding:1em 0 1em 0;
     border: none;
-    border-bottom: 1px solid #ccc;}
+    border-bottom: 1px solid #ccc;
+  }
+  .sign-in{
+    padding: 1em 0 0em 0;
+  }
   fieldset:first-child{
     margin-bottom:0;}
   fieldset:last-child{
@@ -124,4 +128,33 @@ body{
 }
 .hidden {
   display: none;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(192 206 192);
+  padding: 0px 30px;
+}
+.topbar .navbar {
+  display: flex;
+  align-items: center;
+}
+.topbar .navbar ul li {
+  display: inline-block;
+  margin: 0px 8px;
+}
+.topbar .navbar ul li a:hover  {
+  background-color: #33e420;
+}
+.topbar .navbar ul li a {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 30px;
+  border: 0px;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+  text-decoration: none;
 }
